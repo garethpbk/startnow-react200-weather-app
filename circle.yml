@@ -1,0 +1,8 @@
+deployment:
+  prod:
+    branch: heroku
+    heroku:
+      appname: gbk-weather-app
+machine:
+  node:
+    version: 8.9.4
