@@ -1,7 +1,8 @@
 const defaultState = {
   city: '',
   weather: '',
-  history: []
+  history: [],
+  times: []
 };
 
 export default function SearchReducer(state = defaultState, action) {
@@ -25,7 +26,8 @@ export default function SearchReducer(state = defaultState, action) {
     case 'UPDATE_HISTORY': {
       return {
         ...state,
-        history: [...state.history, payload]
+        history: [payload.city, ...state.history],
+        times: [payload.time, ...state.times]
       };
     }
 

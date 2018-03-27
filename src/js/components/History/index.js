@@ -3,7 +3,8 @@ import HistoryView from './HistoryView';
 
 function mapStoreToProps(store) {
   return {
-    history: store.search.history
+    history: store.search.history,
+    times: store.search.times
   };
 }
 

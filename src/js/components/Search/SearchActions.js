@@ -19,8 +19,18 @@ export function getWeather(city) {
 }
 
 export function updateHistory(city) {
+  let dt = new Date();
+  let dF = dt.getMonth() + 1 + '/' + dt.getDate() + '/' + dt.getFullYear();
+  let tF =
+    ('0' + dt.getHours()).slice(-2) + ':' + ('0' + dt.getMinutes()).slice(-2) + ':' + ('0' + dt.getSeconds()).slice(-2);
   return {
     type: 'UPDATE_HISTORY',
-    payload: city
+    payload: {
+      city: city,
+      time: {
+        date: dF,
+        time: tF
+      }
+    }
   };
 }
