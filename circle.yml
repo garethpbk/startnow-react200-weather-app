@@ -1,6 +1,6 @@
 deployment:
   prod:
-    branch: master
+    branch: heroku
     heroku:
       appname: gbk-weather-app
 machine:
